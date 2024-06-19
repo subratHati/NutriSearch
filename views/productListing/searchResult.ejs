@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <ul>
+        <% for(let product of products){ %>
+
+           <a href="/productListing/<%= product._id %>">
+
+            <div class="card mb-3" style="max-width: 640px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="<%=product.image%>" class="img-fluid rounded-start" alt="image not found">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <p class="card-text"><%= product.name%></p>
+                      <h5 class="card-title">$<%=product.price %><small class="text-body-secondary"></small></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        
+        </a>
+
+           
+       <% } %>
+</body>
+</html>

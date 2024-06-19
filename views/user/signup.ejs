@@ -1,0 +1,26 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <% if(error && error.length) {%>
+        <h5><%= error%></h5>
+        <% } %>
+    <h2>Sign up</h2>
+    <form action="/signup" method="POST" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control"  name="username" id="exampleFormControlInput1" placeholder="username" required>
+            <div class="invalid-feedback">username cannot be empty</div>
+            <div class="valid-feedback">username looks good!</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com" required>
+            <div class="invalid-feedback">email cannot be empty</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleFormControlInput1" placeholder="password" required>
+            <div class="invalid-feedback">password cannot be empty</div>
+          </div>
+          <button type="submit" class="btn">Sign up</button>
+    </form>
+</body>

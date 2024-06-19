@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <% if(error && error.length) {%>
+        <h5><%= error%></h5>
+        <% } %>
+    <h2>Log in</h2>
+    <!-- <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="username" style="font-size: 24px;" required>
+        <input type="password" name="password" placeholder="password" style="font-size: 24px;" required>
+        <button style="font-size: 24px;">Log in</button>
+    </form> -->
+
+    <form action="/login" method="POST" novalidate class="needs-validation">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control"  name="username" id="exampleFormControlInput1" placeholder="username" required>
+            <div class="invalid-feedback">Please enter a username</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleFormControlInput1" placeholder="password" required>
+            <div class="invalid-feedback">Please enter a password</div>
+          </div>
+          <button type="submit" class="btn">Login</button>
+    </form>
+</body>
+</html>

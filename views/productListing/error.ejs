@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplate") -%>
+<style>
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.circle{
+    margin-top: 10%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(20, 173, 219);
+    background-color:rgb(20, 173, 219) ;
+    color: white;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+.errorCode{
+    font-size: 3rem;
+    margin-top: 2rem;
+ 
+}
+.message{
+    color: rgb(20, 173, 219);
+}
+.btn{
+    border: 1px solid rgb(20, 173, 219);
+    background-color: white;
+    color: rgb(20, 173, 219);
+}
+.btn:hover{
+    background-color: rgb(20, 173, 219);
+   color: white;
+}
+.circle .error{
+    margin-top: -1.5rem;
+}
+</style>
+<div class="container">
+    <div class="circle">
+        <p class="errorCode">OOPS!</p>
+        <p class="error">ERROR</p>
+    </div>
+    <div>
+        <h3 class="message"><%= err.message%>!</h3>
+    </div>
+    <a href="/" type="button" class="btn">Go to Home</a>
+
+</div>

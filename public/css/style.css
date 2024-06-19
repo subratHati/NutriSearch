@@ -1,0 +1,66 @@
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none !important;
+}
+
+/* Home page */
+/* logo image */ 
+.image{
+    margin-top: 7.5rem;
+    display: flex;
+    justify-content: center;
+}
+/* Search btn */
+
+.button-search{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary{
+    background-color:#059549 !important;
+    border: 1px solid #059549 !important;
+}
+
+.form-control:focus{
+ border: 1px solid #059549 !important;
+}
+.btn-primary:hover{
+    background-color: #068541 !important;
+}
+
+/* detail page  */
+.edit-section{
+    width: 200px;
+    display: flex;
+    justify-content:space-around;
+    margin-left: 1rem;
+}
+
+.edit-section button{
+    width: 5rem;
+}
+
+
+/* Detail page best alternative section */
+.wrapper{
+    margin-bottom: 2rem;
+    background-color: blue;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+
+}
+
+/* Add product page */
+
+.container-add{
+    display: flex;
+    justify-content: center;
+    /* background-color: #059549 !important; */
+}

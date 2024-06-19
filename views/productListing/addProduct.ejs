@@ -1,0 +1,61 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+   
+    <div class="container-add row">
+        <div class="col-8 offset-1" style="font-size: 13px;">
+        <h3>Add a new Product:</h3>
+    <form action="/productListing" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="input-group mb-3">
+            <input name="name" type="text" class="form-control" placeholder="Product name" style="font-size: 18px;" required>
+            <div class="invalid-feedback"> Product name missing! </div>
+        </div>
+        <div class="input-group mb-3">
+            <input name="price" type="text" class="form-control" placeholder="Price" style="font-size: 18px;" required>
+            <div class="invalid-feedback"> Product price missing! </div>
+
+        </div>
+        <div class="input-group mb-3">
+            <input name="image" type="file" class="form-control" placeholder="Upload image" style="font-size: 18px;">
+        </div>
+
+        <div class="input-group mb-3">
+        <select class="form-select form-select mb-3 col" aria-label="Small select example" name="category" required>
+            <option value="">Select category</option>
+            <option value="daily_drink">Daily drink</option>
+            <option value="soft_drinks">Soft drinks</option>
+            <option value="drink_mix">Drink mix</option>
+            <option value="packaged_juice">Packaged juice</option>
+            <option value="chocolate_bar">Chocolate bar</option>
+            <option value="packaged_snacks">Packaged snacks</option>
+            <option value="cookies">Cookies</option>
+          </select>
+          <div class="invalid-feedback"> Please select the category! </div>
+          </div>
+
+         <div class="col">
+          <div class="form-check form-check-inline" >
+            <input class="form-check-input" type="radio" name="type" value="non_healthy" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Non-healthy
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="type" value="healthy" id="flexRadioDefault2" >
+            <label class="form-check-label" for="flexRadioDefault2">
+              Healthy
+            </label>
+          </div>
+        </div>
+   
+
+
+
+        <div class="input-group mb-3">
+            <textarea name="ingredients" type="text" class="form-control" placeholder="ingredients" rows="6" cols="60" required></textarea>
+            <div class="invalid-feedback"> Ingredient list missing! </div>
+        </div>
+        <button type="submit" class="btn btn-sm py-1" style="font-size: 18px;">Submit</button>
+    </form>
+</div>
+</div>
+</body>
