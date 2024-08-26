@@ -66,11 +66,11 @@
                                 <% for(let product of allProduct){ %>
                                     <% if(product.category===currProduct.category && product.type==="healthy" ){ %>
                                
-                                <div class="card me-4" style="min-width: 18rem; max-width: 18rem; height: 32rem;">
-                                <img src="  <%=product.image%>" class="card-img-top p-2" alt="no image found" style="width: 12rem;">
+                                <div class="card me-4" style="min-width: 18rem; max-width: 18rem; height: 28rem;">
+                                <img src="  <%=product.image.url%>" class="card-img-top p-2" alt="no image found" style="width: 12rem;">
                                 <div class="card-body">
                                   <h5 class="card-title">&#8377;<%=product.price%></h5>
-                                  <p class="card-text">  <%=product.name%></p>
+                                  <p class="card-text"><%= product.name.length > 50 ? product.name.substring(0, 50)+"..." : product.name %></p>
                                   <a href="/productListing/<%= product._id%>" class="btn btn-primary">View</a>
                                 </div>
                               </div>

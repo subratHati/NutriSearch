@@ -14,25 +14,27 @@
               </h5>
               <%}%>
   
+              <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
                     <% for(let product of allProductListing){ %>
                         <a href="/productListing/<%= product._id %>">
 
-                            <div class="card mb-3" style="max-width: 640px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="<%=product.image.url%>" class="img-fluid rounded-start" alt="image not found">
-                              </div>
+                            <div class="card mb-3 productContainer" style="max-width: 18rem; height: 350px;">
+                            <!-- <div class="row g-0">
+                              <div class="col-md-4"> -->
+                                <img src="<%=product.image.url%>" class="card-img-top img" alt="image not found">
+                              <!-- </div> -->
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <p class="card-text"><%= product.name%></p>
+                                  <p class="card-text"><%= product.name.length > 50 ? product.name.substring(0, 50)+"..." : product.name %></p>
                                   <h5 class="card-title">&#8377;<%=product.price %><small class="text-body-secondary"></small></h5>
                                 </div>
-                              </div>
-                            </div>
+                               </div>
+                            <!--</div> -->
                           </div>
                 </a>
 
                 <% } %>
+              </div>
 
 
     </body>

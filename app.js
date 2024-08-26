@@ -26,7 +26,7 @@ const MongoStore = require('connect-mongo');
 const upload = multer({ storage })  //set multer destination folder where all the files are saved, send from frontend
 
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/NutriSearch";
+ const MONGO_URL = "mongodb://127.0.0.1:27017/NutriSearch";
 const dburl = process.env.ATLAS_URL;
 
 const store = MongoStore.create({

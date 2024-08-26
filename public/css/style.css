@@ -64,3 +64,16 @@ a{
     justify-content: center;
     /* background-color: #059549 !important; */
 }
+
+/* image size in index file. */
+.img{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+/* product card hover */
+
+.productContainer:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
